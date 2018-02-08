@@ -1,6 +1,6 @@
-#
+#Shiny Visual application Code
 library(shiny)
-source("../VoicesDataAnalysis.R")
+source("Data/VoicesDataAnalysis.R")
 # Define UI for application that draws a histogram
 ui <- fluidPage(
    

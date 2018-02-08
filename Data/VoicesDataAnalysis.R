@@ -2,8 +2,7 @@
 library(dplyr)
 #https://rdivanji.shinyapps.io/VoicesReport/
 #set working directory
-setwd("~/Desktop/info201/infotrials/VoicesProject/")
-
+setwd("Data")
 #grab data
 student_data <- read.csv("TestData_VoicesFromTheField2016.csv")
 
