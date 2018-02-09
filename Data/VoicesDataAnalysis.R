@@ -26,13 +26,15 @@ attendance.2015_p.value <- attendance_2015_results$p.value
 attendance.2015_conf.interval <- attendance_2015_results$conf.int
 attendance.2015_estimate.means <- attendance_2015_results$estimate
 #Voices 2015 t-test results as dataframe 
-results2015.names <- c("Null Hypothesis", 
+results2015.names <- c("Findings",
+                       "Null Hypothesis", 
                        "Alternative Hypothesis",
-                       "Sample Size", "Average Absence 2014-15","Average Absence 2015-16", "Obtained Test Statistic", "Pooled Degrees of Freedom", "P-value", "Confidence Interval Low", "Confidence Interval High", "Findings")
-results2015.values <- c(" ", " ", attendance_2015_num, avg.absent_14.15, avg.absent_15.16, attendance.2015_t.obtained, attendance.2015_df, attendance.2015_p.value, attendance.2015_conf.interval, " ")
-results2015.units <- c("There is no significant difference in the average number absent days between pre-intervention and post-intervention.",
+                       "Sample Size", "Average Absence 2014-15","Average Absence 2015-16", "Obtained Test Statistic", "Pooled Degrees of Freedom", "P-value", "Confidence Interval Low", "Confidence Interval High")
+results2015.values <- c(" "," ", " ", attendance_2015_num, avg.absent_14.15, avg.absent_15.16, attendance.2015_t.obtained, attendance.2015_df, attendance.2015_p.value, attendance.2015_conf.interval)
+results2015.units <- c("There is not sufficient evidence to suggest attending Voices From the Field 2015 significantly impacts the average number of days a student is absent from school.",
+                       "There is no significant difference in the average number absent days between pre-intervention and post-intervention.",
                        "There is a significant difference in the average number absent days between pre-intervention and post-intervention.",
-                       "Students", "Days","Days", "<  +/-1.984 Critical Test Statistic = Fail to reject null", " ", " >  0.05 = Fail to reject null", " ", " ", "There is not sufficient evidence to suggest attending Voices From the Field 2015 significantly impacts the average number of days a student is absent from school.")
+                       "Students", "Days","Days", "<  +/-1.984 Critical Test Statistic = Fail to reject null", " ", " >  0.05 = Fail to reject null", " ", " ")
 results2015.df <- data.frame(results2015.names, results2015.values, results2015.units)
 
 #attendance 2016
@@ -53,13 +55,15 @@ attendance.2016_p.value <- attendance_2016_results$p.value
 attendance.2016_conf.interval <- attendance_2016_results$conf.int
 attendance.2016_estimate.means <- attendance_2016_results$estimate
 #Voices 2016 t-test results as dataframe 
-results2016.names <- c("Null Hypothesis", 
+results2016.names <- c("Findings", 
+                        "Null Hypothesis", 
                        "Alternative Hypothesis",
-                       "Sample Size", "Average Absence 2015-16","Average Absence 2016-17", "Obtained Test Statistic", "Pooled Degrees of Freedom", "P-value", "Confidence Interval Low", "Confidence Interval High", "Findings")
-results2016.values <- c(" ", " ", attendance_2016_num, avg2016.absent_15.16, avg2016.absent_16.17, attendance.2016_t.obtained, attendance.2016_df, attendance.2016_p.value, attendance.2016_conf.interval, " ")
-results2016.units <- c("There is no significant difference in the average number absent days between pre-intervention and post-intervention.",
+                       "Sample Size", "Average Absence 2015-16","Average Absence 2016-17", "Obtained Test Statistic", "Pooled Degrees of Freedom", "P-value", "Confidence Interval Low", "Confidence Interval High")
+results2016.values <- c(" "," ", " ", attendance_2016_num, avg2016.absent_15.16, avg2016.absent_16.17, attendance.2016_t.obtained, attendance.2016_df, attendance.2016_p.value, attendance.2016_conf.interval)
+results2016.units <- c("There is not sufficient evidence to suggest attending Voices From the Field 2016 significantly impacts the average number of days a student is absent from school.",
+                       "There is no significant difference in the average number absent days between pre-intervention and post-intervention.",
                        "There is a significant difference in the average number absent days between pre-intervention and post-intervention.",
-                       "Students", "Days","Days", "<  +/-1.984 Critical Test Statistic = Fail to reject null", " ", " > 0.05 = Fail to reject null", " ", " ", "There is not sufficient evidence to suggest attending Voices From the Field 2016 significantly impacts the average number of days a student is absent from school.")
+                       "Students", "Days","Days", "<  +/-1.984 Critical Test Statistic = Fail to reject null", " ", " > 0.05 = Fail to reject null", " ", " ")
 results2016.df <- data.frame(results2016.names, results2016.values, results2016.units)
 
 

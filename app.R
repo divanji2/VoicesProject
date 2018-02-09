@@ -5,25 +5,55 @@ library(shiny)
 source("Data/VoicesDataAnalysis.R")
 # Define UI for application that draws a histogram
 ui <- fluidPage(
-   
-   # Application title
-   titlePanel("Voices Report"),
-   
-   # Sidebar with a slider input for number of bins 
-   sidebarLayout(
-      sidebarPanel(
-        checkboxGroupInput(inputId = "year",
-                           label = "Year:",
-                           choices = c("Voices 2015", "Voices 2016"),
-                           selected = "Voices 2015")
-      ),
-      
-      # Show a plot of the generated distribution
-      mainPanel(
-         plotOutput("meansPlot"),
-         tableOutput("ResultsTable")
-      )
-   )
+  navbarPage("Voices From The Field 2015 & 2016 Findings",
+             #Attendance
+             tabPanel("Attendance",
+                      titlePanel("Attendance Data"),
+                      sidebarLayout(
+                        sidebarPanel(
+                          checkboxGroupInput(inputId = "year",
+                                             label = "Year:",
+                                             choices = c("Voices 2015", "Voices 2016"),
+                                             selected = "Voices 2016")
+
+                        ),
+                        mainPanel(
+                          plotOutput("meansPlot"),
+                          tableOutput("ResultsTable")
+                        )
+                      )
+             ),
+             
+             #Math
+             tabPanel("Math",
+                      sidebarLayout(
+                        sidebarPanel(
+
+                        ),
+                        mainPanel(
+
+                        )
+                      )
+             ),
+             
+             #Reading
+             tabPanel("Reading",
+                      sidebarLayout(
+                        sidebarPanel(
+                          checkboxGroupInput(inputId = "type",
+                                             label = "Type:",
+                                             choices = c("bike", "rack"),
+                                             selected = "bike")
+                        ),
+                        mainPanel(
+
+                        )
+                      )
+             )
+             
+             
+  )
+
 )
 
 # Define server logic required to draw a barplot
@@ -66,6 +96,7 @@ server <- function(input, output) {
      }
       
    })
+
 }
 
 # Run the application 
